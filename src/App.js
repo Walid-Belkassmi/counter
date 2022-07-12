@@ -16,10 +16,10 @@ class App extends React.Component {
   }
 
   handleButtonPlus = () => {
-  if(this.state.value < this.state.value2 && this.state.value < 100){
+  if(this.state.value < this.state.value2){
     this.setState({value: this.state.value + 1})
   }
-   if(this.state.value === this.state.value2){
+   if(this.state.value === this.state.value2 && this.state.value < 100){
     this.setState({value: this.state.value + 1})
     this.setState({value2: this.state.value2 + 1})
     }
