@@ -2,7 +2,7 @@ import React from "react"
 import './App.css';
 import Counter from "./components/Counter"
 import './styles/global.css'
-
+ 
 class App extends React.Component {
   constructor(){
     super()
@@ -42,8 +42,8 @@ class App extends React.Component {
 
   handleButtonMinus2 = () => {
     if(this.state.value === this.state.value2 && this.state.value2 > 0){
-      this.setState({value: this.state.value - 1})
       this.setState({value2: this.state.value2 - 1})
+      this.setState({value: this.state.value - 1})
       }
   }
 
@@ -52,8 +52,10 @@ class App extends React.Component {
       <div className="main">
         <div className="first">
           <h1>Counter</h1>
-          <Counter count={this.state.value} increment={this.handleButtonPlus} substract={this.handleButtonMinus}/>
-          <Counter count={this.state.value2} increment={this.handleButtonPlus2} substract={this.handleButtonMinus2}/>
+          <div className="counter">
+            <Counter count={this.state.value} increment={this.handleButtonPlus} substract={this.handleButtonMinus}/>
+            <Counter count={this.state.value2} increment={this.handleButtonPlus2} substract={this.handleButtonMinus2}/>
+          </div>
         </div>
       </div>
 

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+/* font-family: 'Monoton', cursive; */
+
 .first{
     display: flex;
     flex-direction: column;
@@ -5,8 +8,9 @@
 }
 
 h1{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
+    font-family: 'Monoton',cursive;
+    color: #628395;
+    font-size: 70px;
 }
 
 h2{
@@ -15,13 +19,24 @@ h2{
     font-size: 40px;
 }
 
+.counter{
+    display: flex;
+    gap: 80px;
+    background-color: #DEC4A1;
+    border: solid 1px #DEC4A1;
+    border-radius: 5px;
+    padding: 50px;
+    -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
 .buttons{
     display: flex;
     gap: 40px;
 }
 
 .plus{
-    background-color: green;
+    background-color: #EAEAEA;
     width: 50px;
     height: 50px;
     border-radius: 50px;
@@ -29,12 +44,20 @@ h2{
     border: none;
 }
 
+.plus:hover{
+    background-color: #38B000;
+}
+
 .moins{
-    background-color: red;
+    background-color: #EAEAEA;
     width: 50px;
     height: 50px;
     border-radius: 50px;
     cursor: pointer;
     border: none;
+}
+
+.moins:hover{
+    background-color: #A71E34;
 }
 
