@@ -1,25 +1,65 @@
-import logo from './logo.svg';
+import React from "react"
 import './App.css';
+import Counter from "./components/Counter"
+import './styles/global.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(){
+    super()
+    
+    //Déclaration du state initialisé à 0 
+    this.state = {
+      value: 0,
+      value2:0
+    }
+
+  }
+
+  handleButtonPlus = () => {
+  if(this.state.value < this.state.value2 && this.state.value < 100){
+    this.setState({value: this.state.value + 1})
+  }
+   if(this.state.value === this.state.value2){
+    this.setState({value: this.state.value + 1})
+    this.setState({value2: this.state.value2 + 1})
+    }
+
+  }
+
+  handleButtonMinus = () => {
+    if(this.state.value > 0){
+      this.setState({value: this.state.value - 1})
+    }
+    
+  }
+
+// ----------------- Compteur 2 --------------------
+  handleButtonPlus2 = () => {
+    if(this.state.value2 < 100){
+      this.setState({value2: this.state.value2 + 1})
+    }
+  }  
+
+  handleButtonMinus2 = () => {
+    if(this.state.value === this.state.value2 && this.state.value2 > 0){
+      this.setState({value: this.state.value - 1})
+      this.setState({value2: this.state.value2 - 1})
+      }
+  }
+
+  render(){
+    return(
+      <div className="main">
+        <div className="first">
+          <h1>Counter</h1>
+          <Counter count={this.state.value} increment={this.handleButtonPlus} substract={this.handleButtonMinus}/>
+          <Counter count={this.state.value2} increment={this.handleButtonPlus2} substract={this.handleButtonMinus2}/>
+        </div>
+      </div>
+
+
+    )
+  }
 }
 
 export default App;

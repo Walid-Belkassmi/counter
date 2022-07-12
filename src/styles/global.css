@@ -1,0 +1,40 @@
+.first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.buttons{
+    display: flex;
+    gap: 40px;
+}
+
+.plus{
+    background-color: green;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+}
+
+.moins{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+}
+
